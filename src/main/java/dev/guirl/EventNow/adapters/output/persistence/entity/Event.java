@@ -22,7 +22,9 @@ public class Event {
     private String eventLocation;
     private Integer eventCapacity;
     private String eventIdentifier;
+    @Enumerated(EnumType.STRING)
     private EventType eventType;
+    @Enumerated(EnumType.STRING)
     private EventStatus eventStatus;
     private LocalDateTime eventInitialDate;
     private LocalDateTime eventFinalDate;
