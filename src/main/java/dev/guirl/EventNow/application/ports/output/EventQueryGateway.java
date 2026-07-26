@@ -1,11 +1,10 @@
 package dev.guirl.EventNow.application.ports.output;
 
-import dev.guirl.EventNow.domain.model.event.Event;
+import dev.guirl.EventNow.domain.model.event.EventModel;
 
-import java.util.Optional;
 import java.util.UUID;
 
 public interface EventQueryGateway {
 
-    public Event findById(UUID id);
+    public EventModel findById(UUID id);
 }

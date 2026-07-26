@@ -3,7 +3,7 @@ package dev.guirl.EventNow.application.useCase;
 import dev.guirl.EventNow.application.ports.input.GetEventByIdUseCase;
 import dev.guirl.EventNow.application.ports.output.EventQueryGateway;
 import dev.guirl.EventNow.domain.exceptions.EventNotFoundException;
-import dev.guirl.EventNow.domain.model.event.Event;
+import dev.guirl.EventNow.domain.model.event.EventModel;
 
 import java.util.UUID;
 
@@ -16,13 +16,13 @@ public class GetEventByIdUseCaseImpl implements GetEventByIdUseCase {
     }
 
     @Override
-    public Event execute(UUID id) {
-        Event event = eventQueryGateway.findById(id);
+    public EventModel execute(UUID id) {
+        EventModel eventModel = eventQueryGateway.findById(id);
 
-        if (event == null) {
+        if (eventModel == null) {
             throw new EventNotFoundException(id);
         }
 
-        return event;
+        return eventModel;
     }
 }

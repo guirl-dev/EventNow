@@ -3,7 +3,7 @@ package dev.guirl.EventNow.domain.model.event;
 import java.time.LocalDateTime;
 import java.util.UUID;
 
-public record Event(
+public record EventModel(
         UUID id,
         String eventName,
         String eventDescription,
