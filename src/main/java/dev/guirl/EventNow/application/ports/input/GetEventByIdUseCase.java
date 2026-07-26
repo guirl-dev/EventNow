@@ -6,5 +6,5 @@ import java.util.UUID;
 
 public interface GetEventByIdUseCase {
 
-    public EventModel execute(UUID id);
+    EventModel execute(UUID id);
 }

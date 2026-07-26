@@ -5,7 +5,9 @@ import dev.guirl.EventNow.adapters.input.controllers.dto.response.CreateEventRes
 import dev.guirl.EventNow.domain.model.event.EventModel;
 import dev.guirl.EventNow.domain.model.event.EventStatus;
 import dev.guirl.EventNow.domain.model.event.EventType;
+import org.springframework.stereotype.Component;
 
+@Component
 public class EventDtoMapper {
 
     public EventModel toEventModel(CreateEventRequestDTO dto) {

@@ -4,5 +4,5 @@ import dev.guirl.EventNow.domain.model.event.EventModel;
 
 public interface CreateEventUseCase {
 
-    public EventModel execute(EventModel eventModel);
+    EventModel execute(EventModel eventModel);
 }

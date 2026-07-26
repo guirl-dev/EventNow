@@ -1,5 +1,8 @@
 package dev.guirl.EventNow.domain.model.event;
 
+import lombok.Getter;
+
+@Getter
 public enum EventStatus {
     PLANNED("Planned"),
     IN_PROGRESS("In Progress"),
@@ -12,7 +15,4 @@ public enum EventStatus {
         this.description = description;
     }
 
-    public String getDescription() {
-        return description;
-    }
 }

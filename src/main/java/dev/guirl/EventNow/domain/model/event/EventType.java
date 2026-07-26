@@ -1,5 +1,8 @@
 package dev.guirl.EventNow.domain.model.event;
 
+import lombok.Getter;
+
+@Getter
 public enum EventType {
     LECTURE("Lecture"),
     MUSIC("Music"),
@@ -12,7 +15,4 @@ public enum EventType {
         this.description = description;
     }
 
-    public String getDescription() {
-        return description;
-    }
 }
