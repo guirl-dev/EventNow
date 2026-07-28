@@ -2,6 +2,7 @@ package dev.guirl.EventNow.adapters.input.controllers.mapper;
 
 import dev.guirl.EventNow.adapters.input.controllers.dto.request.CreateEventRequestDTO;
 import dev.guirl.EventNow.adapters.input.controllers.dto.response.CreateEventResponseDTO;
+import dev.guirl.EventNow.adapters.input.controllers.dto.response.GetEventResponseDTO;
 import dev.guirl.EventNow.domain.model.event.EventModel;
 import dev.guirl.EventNow.domain.model.event.EventStatus;
 import dev.guirl.EventNow.domain.model.event.EventType;
@@ -44,6 +45,21 @@ public class EventDtoMapper {
                 identifier,
                 type,
                 status,
+                model.eventInitialDate(),
+                model.eventFinalDate()
+        );
+    }
+
+    public GetEventResponseDTO toGetEventResponseDTO(EventModel model) {
+        return new GetEventResponseDTO(
+                model.id(),
+                model.eventName(),
+                model.eventDescription(),
+                model.eventLocation(),
+                model.eventCapacity(),
+                model.eventIdentifier(),
+                model.eventType(),
+                model.eventStatus(),
                 model.eventInitialDate(),
                 model.eventFinalDate()
         );

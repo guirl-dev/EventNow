@@ -24,7 +24,7 @@ public class CreateEventUseCaseImpl implements CreateEventUseCase {
             eventModel.eventDescription(),
             eventModel.eventLocation(),
             eventModel.eventCapacity(),
-            eventIdentifierService.generate(eventModel.eventName()),
+            eventIdentifierService.generate(eventModel),
             eventModel.eventType(),
             eventModel.eventStatus(),
             eventModel.eventInitialDate(),

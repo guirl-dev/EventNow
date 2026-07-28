@@ -2,9 +2,7 @@ package dev.guirl.EventNow.application.ports.input;
 
 import dev.guirl.EventNow.domain.model.event.EventModel;
 
-import java.util.UUID;
+public interface GetEventByIdentifierUseCase {
 
-public interface GetEventByIdUseCase {
-
-    EventModel execute(UUID id);
+    EventModel execute(String eventIdentifier);
 }
